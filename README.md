@@ -88,6 +88,4 @@ This implementation serves as a strong foundation. Potential enhancements includ
 -   [ ] Implement more advanced optimizers like `Adam` or `RMSprop`.
 -   [ ] Improve performance by refactoring to use matrix operations (vectorization) instead of nested loops.
 
-## License
 
-This project is licensed under the MIT License.
