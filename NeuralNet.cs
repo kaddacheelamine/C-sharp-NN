@@ -201,8 +201,8 @@ namespace NN
             for (int e = 0; e <= 1; e++)
             for (int f = 0; f <= 1; f++)
             {
-                int y = ((a | b) ^ ((c ^ f) & (d | e)));
-                data.Add((new double[]{a,b,c,d,e}, new double[]{y}));
+                int y = ((a | b) ^ ((c & f) ^ (d | e)));
+                data.Add((new double[]{a,b,c,d,e,f}, new double[]{y}));
             }
 
             // تقسيم: 22 للتدريب، 10 للاختبار
@@ -211,10 +211,10 @@ namespace NN
             var train = data.Take(54).ToList();
             var test = data.Skip(54).ToList();
 
-            var net = new NNets(new int[]{5, 8, 1}, Act.Sig);
+            var net = new NNets(new int[]{6, 10, 1}, Act.Sig);
 
             Console.WriteLine("Training...");
-            net.Train(train, ep: 5000, mb: 4, lr: 0.002);
+            net.Train(train, ep: 5000, mb: 2, lr: 0.002);
 
             int correct = 0;
             foreach (var (x,y) in test)
