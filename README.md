@@ -40,11 +40,7 @@ The project consists of a single C# file containing a few key classes:
 
 To run this project, you will need the .NET SDK installed.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repo-url>
-    cd <repo-folder>
-    ```
+
 
 2.  **Run the project:**
     You can run the code directly using the .NET CLI.
